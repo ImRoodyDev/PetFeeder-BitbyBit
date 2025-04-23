@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXClippedPane?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.SVGPath?>
+
+<HBox styleClass="dash-feeder" stylesheets="@../css/desktop/components.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox styleClass="dash-container" HBox.hgrow="ALWAYS">
+         <children>
+            <HBox alignment="CENTER_LEFT" styleClass="dash-header">
+               <children>
+                  <AnchorPane HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="Setup feeder porpotions" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <VBox fx:id="scheduleList" styleClass="dash-list" VBox.vgrow="ALWAYS">
+               <children>
+                  <StackPane alignment="TOP_LEFT" prefHeight="53.0" prefWidth="628.0" stylesheets="@../css/desktop/customs.css">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefWidth="678.0" spacing="20.0">
+                           <StackPane.margin>
+                              <Insets />
+                           </StackPane.margin>
+                           <children>
+                              <StackPane prefHeight="70.0" prefWidth="43.0" HBox.hgrow="NEVER">
+                                 <children>
+                                    <SVGPath content="M19.5032 18.4322C19.9553 16.2169 20.1872 13.7874 20.1756 11.3405C20.1646 8.99728 19.933 6.67783 19.5031 4.56763H3.49667C3.04466 6.78308 2.81282 9.21268 2.82432 11.6595C2.83528 14.003 3.06685 16.3224 3.49662 18.4322H19.5032ZM11.4998 16.1961C9.64971 16.1961 8.04339 15.6383 8.04339 13.8117C8.04339 12.1092 9.59391 10.7241 11.4998 10.7241C13.4057 10.7241 14.9562 12.1092 14.9562 13.8117C14.9562 15.6373 13.3517 16.1961 11.4998 16.1961ZM15.1071 7.95024C16.1394 7.7724 17.1193 8.4642 17.297 9.49686C17.4956 10.6507 16.6114 11.7136 15.4261 11.7136C14.529 11.7136 13.7212 11.0734 13.5606 10.1401C13.3828 9.10761 14.0745 8.12804 15.1071 7.95024ZM11.4998 6.69648C12.5451 6.69648 13.3956 7.54689 13.3956 8.59222C13.3956 9.63755 12.5451 10.488 11.4998 10.488C10.4545 10.488 9.60407 9.63755 9.60407 8.59222C9.60407 7.54689 10.4546 6.69648 11.4998 6.69648ZM7.57086 7.92284C8.61614 7.92284 9.4666 8.77326 9.4666 9.81859C9.4666 10.8639 8.61619 11.7143 7.57086 11.7143C6.52552 11.7143 5.67511 10.8639 5.67511 9.81859C5.67515 8.77326 6.52557 7.92284 7.57086 7.92284Z&#10;M3.47997 2.96309H19.5199L19.9897 0.988012C20.1096 0.484078 19.7268 0 19.2092 0H3.7906C3.27256 0 2.89028 0.484438 3.01004 0.988057L3.47997 2.96309Z&#10;M19.5198 20.0369H3.47996L3.01012 22.0119C2.89018 22.5158 3.273 22.9999 3.79059 22.9999H19.2091C19.7272 22.9999 20.1095 22.5155 19.9897 22.0119L19.5198 20.0369Z&#10;" StackPane.alignment="CENTER">
+                                       <styleClass>
+                                          <String fx:value="icon" />
+                                          <String fx:value="purple" />
+                                       </styleClass>
+                                    </SVGPath>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="icon-parent" />
+                                    <String fx:value="purple" />
+                                 </styleClass>
+                              </StackPane>
+                              <AnchorPane HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label fx:id="timeLabel" focusTraversable="false" mouseTransparent="true" prefHeight="70.0" prefWidth="335.0" text="Current selected feeder" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <HBox alignment="CENTER" prefHeight="70.0" styleClass="combo-bx-config">
+                                 <children>
+                                    <JFXComboBox fx:id="feedersCombo" prefWidth="112.0" promptText="Feeder ID" styleClass="combo-bx" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                     <styleClass>
+                        <String fx:value="setup-bx" />
+                        <String fx:value="big" />
+                     </styleClass>
+                  </StackPane>
+                  <StackPane alignment="TOP_LEFT" prefHeight="53.0" prefWidth="628.0" styleClass="setup-bx" stylesheets="@../css/desktop/customs.css">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefWidth="678.0" spacing="20.0">
+                           <StackPane.margin>
+                              <Insets />
+                           </StackPane.margin>
+                           <children>
+                              <StackPane prefHeight="70.0" prefWidth="43.0" styleClass="icon-parent" HBox.hgrow="NEVER">
+                                 <children>
+                                    <SVGPath content="M16.9161 1.42516C16.2124 1.10011 13.8845 1.20837 13.1268 0.829722C12.3685 0.450717 11.2319 0.396406 10.2035 0.3425C8.89723 0.273949 7.76735 0.99189 7.17187 1.0462C6.57638 1.10011 5.43982 1.42516 4.89824 2.07455C4.41102 2.39925 3.9781 2.99509 3.9781 2.99509H18.8107C18.8107 2.99509 17.6198 1.74986 16.9161 1.42516Z&#10;M22.9577 11.4647L21.1436 5.7075C20.8717 4.84505 20.0722 4.25854 19.1678 4.25854H3.83224C2.92814 4.25854 2.12822 4.84505 1.85671 5.7075L0.0426302 11.4647C-0.0453717 11.7445 0.00521029 12.0493 0.178564 12.286C0.351962 12.5223 0.627603 12.662 0.920853 12.662H22.0796C22.3728 12.662 22.6484 12.5223 22.8218 12.286C22.9952 12.0493 23.0457 11.7445 22.9577 11.4647ZM16.3317 9.53381C16.3317 10.2278 15.7691 10.7899 15.0756 10.7899C14.382 10.7899 13.8195 10.2278 13.8195 9.53381C13.8195 9.5012 13.8221 9.46903 13.8243 9.43718C13.6738 9.28175 13.4798 9.14169 13.2701 9.14169C12.7993 9.14169 12.3282 9.14169 12.3282 9.14169C12.3282 9.14169 9.97369 9.14169 9.50259 9.14169C9.29285 9.14169 9.09924 9.28175 8.94835 9.43718C8.95059 9.46903 8.9532 9.50124 8.9532 9.53381C8.9532 10.2278 8.39109 10.7899 7.69709 10.7899C7.0035 10.7899 6.44139 10.2278 6.44139 9.53381C6.44139 9.06083 6.70315 8.64921 7.08966 8.43502C6.70315 8.22119 6.44139 7.80962 6.44139 7.33623C6.44139 6.64264 7.0035 6.08053 7.69709 6.08053C8.34761 6.08053 8.8824 6.57449 8.94682 7.20776C9.34564 7.65006 11.438 7.49314 12.3282 7.49314C13.1772 7.49314 13.3888 7.62045 13.8243 7.24333C13.8723 6.59323 14.4135 6.08053 15.0756 6.08053C15.7691 6.08053 16.3317 6.64264 16.3317 7.33623C16.3317 7.80962 16.0695 8.22119 15.6834 8.43502C16.0695 8.64925 16.3317 9.06083 16.3317 9.53381Z&#10;" styleClass="icon" StackPane.alignment="CENTER" />
+                                 </children>
+                              </StackPane>
+                              <AnchorPane HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label fx:id="timeLabel1" focusTraversable="false" mouseTransparent="true" prefHeight="70.0" prefWidth="356.0" text="Aantal gram per voedsel porpotions" wrapText="true" />
+                                 </children>
+                              </AnchorPane>
+                              <HBox alignment="CENTER" prefHeight="70.0" styleClass="combo-bx-config">
+                                 <children>
+                                    <JFXComboBox fx:id="portionCombo" prefWidth="112.0" promptText="Gram (G)" styleClass="combo-bx" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </StackPane>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="20.0" prefWidth="644.0">
+               <children>
+                  <JFXButton fx:id="saveBt" text="Save">
+                     <styleClass>
+                        <String fx:value="bt" />
+                        <String fx:value="save" />
+                     </styleClass>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <JFXClippedPane prefWidth="500.0" styleClass="dash-cat">
+         <children>
+            <Pane prefHeight="664.0" prefWidth="268.0">
+               <children>
+                  <Circle fill="#3eb5ef" layoutX="250.0" layoutY="-33.0" radius="247.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <ImageView fitHeight="355.0" fitWidth="467.0" layoutX="-172.0" layoutY="144.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/waves.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="526.0" fitWidth="974.0" layoutX="3.0" layoutY="114.0" preserveRatio="true" styleClass="image">
+                     <image>
+                        <Image url="@../images/vecteezy_fluffy-kitten-sitting-next-to-a-bowl-of-cat-food-with_50591033.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="97.0" fitWidth="91.0" layoutX="131.0" layoutY="317.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../images/vector.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="54.0" fitWidth="52.0" layoutX="29.0" layoutY="558.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/star.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="48.0" fitWidth="44.0" layoutX="430.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/star.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="100.0" layoutY="28.0" text="Setup Feeder" textFill="WHITE" />
+               </children>
+            </Pane>
+         </children>
+      </JFXClippedPane>
+   </children>
+</HBox>

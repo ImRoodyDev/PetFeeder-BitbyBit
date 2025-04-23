@@ -1,0 +1,240 @@
+.device-parent .device-name {
+	-fx-padding: 12px 0px 0 92px;
+	-fx-font-family: 'Montserrat';
+	/*-fx-font-size: 18px;*/
+	/*-fx-font-weight: 700;*/
+}
+.device-parent .device {
+	-fx-background-color: white;
+	-fx-background-radius: 18px;
+	-fx-padding: 26px;
+	-jfx-unselected-color: grey;
+	-jfx-selected-color: black;
+
+	-fx-font-family: 'Montserrat';
+	-fx-font-size: 18px;
+	-fx-font-weight: 700;
+	-fx-text-fill: black;
+}
+.device-parent .device:selected {
+	/*-fx-background-color: #00aced; */
+	-fx-background-color: white;
+}
+.device-parent .device .icon {
+	-fx-scale-x: 1.5;
+	-fx-scale-y: 1.5;
+	-fx-translate-x: 8px;
+	-fx-fill: #999999;
+}
+
+.schedule-bx {
+	-fx-background-radius: 18;
+	-fx-background-color: #f2f2f2;
+	-fx-padding: 0 18;
+	-fx-pref-height: 70px;
+}
+.schedule-bx .label {
+	-fx-font-family: 'Montserrat';
+	-fx-font-size: 18px;
+	-fx-font-weight: 700;
+	-fx-text-fill: black;
+}
+.schedule-bx .icon {
+	-fx-scale-x: 2.5;
+	-fx-scale-y: 2.5;
+	-fx-fill: #ffa600;
+}
+.schedule-bx .bt {
+	-fx-text-fill: white;
+	-fx-font-size: 19px;
+	-fx-font-weight: 700;
+	-fx-background-radius: 26px;
+}
+.schedule-bx .remove {
+	-fx-text-fill: white;
+	-fx-pref-width: 40px;
+	-fx-pref-height: 40px;
+	-fx-background-radius: 26px;
+	-fx-background-color: grey;
+}
+.schedule-bx .remove .dlt-icon {
+	-fx-fill: white;
+}
+.schedule-bx .time-config {
+	-fx-padding: 16 18;
+	-fx-spacing: 8px;
+}
+.schedule-bx .time-config .time {
+	-fx-font-size: 14;
+	-fx-font-weight: 700;
+	-fx-alignment: center;
+
+	-fx-pref-width: 112;
+	-fx-background-color: white;
+	-fx-background-radius: 18;
+	-fx-border-radius: 18;
+	-fx-border-color: #4d4d4d;
+	-jfx-focus-color: transparent; /* Remove focus underline color */
+	-jfx-unfocus-color: transparent; /* Remove unfocused underline color */
+}
+.schedule-bx .time-config .time .text-field {
+	-fx-alignment: center;
+}
+.schedule-bx .time-config .time > .prompt-container {
+	-fx-alignment: center;
+}
+.combo-box-popup .list-view {
+	-fx-background-radius: 12px; /* Apply rounded corners to the popup */
+	-fx-border-radius: 12px; /* Match the border radius */
+	-fx-translate-y: 2;
+}
+
+.setup-bx {
+	-fx-background-radius: 18;
+	-fx-background-color: #f2f2f2;
+	-fx-padding: 0 18;
+	-fx-pref-height: 70px;
+}
+.setup-bx.big {
+	-fx-pref-height: 90px;
+}
+.setup-bx .label {
+	-fx-font-family: 'Montserrat';
+	-fx-font-size: 18px;
+	-fx-font-weight: 700;
+	-fx-text-fill: black;
+}
+.setup-bx .icon {
+	-fx-scale-x: 1.5;
+	-fx-scale-y: 1.5;
+	-fx-fill: #ffa600;
+}
+.setup-bx .icon.purple {
+	-fx-fill: #4a23d3;
+}
+.setup-bx .bt {
+	-fx-text-fill: white;
+	-fx-font-size: 19px;
+	-fx-font-weight: 700;
+	-fx-background-radius: 26px;
+}
+.setup-bx .remove {
+	-fx-text-fill: white;
+	-fx-pref-width: 40px;
+	-fx-pref-height: 40px;
+	-fx-background-radius: 26px;
+	-fx-background-color: grey;
+}
+.setup-bx .remove .dlt-icon {
+	-fx-fill: white;
+}
+.setup-bx .combo-bx-config {
+	-fx-padding: 16 18;
+	-fx-spacing: 8px;
+}
+.setup-bx .combo-bx-config .combo-bx {
+	-fx-font-size: 14;
+	-fx-font-weight: 700;
+	-fx-alignment: center;
+
+	-fx-pref-width: 112;
+	-fx-pref-height: 38;
+	-fx-background-color: white;
+	-fx-background-radius: 18;
+	-fx-border-radius: 18;
+	-fx-border-color: #4d4d4d;
+	-jfx-focus-color: transparent; /* Remove focus underline color */
+	-jfx-unfocus-color: transparent; /* Remove unfocused underline color */
+}
+.setup-bx .combo-bx-config .combo-bx .text-field {
+	-fx-alignment: center;
+}
+.setup-bx .combo-bx-config .combo-bx > .prompt-container {
+	-fx-alignment: center;
+}
+.setup-bx .combo-box-popup .list-view {
+	-fx-background-radius: 12px; /* Apply rounded corners to the popup */
+	-fx-border-radius: 12px; /* Match the border radius */
+	-fx-translate-y: 2;
+}
+
+.setting-bx {
+	-fx-background-radius: 18;
+	-fx-background-color: #f2f2f2;
+	-fx-padding: 0 18;
+	-fx-pref-height: 70px;
+}
+.setting-bx.big {
+	-fx-pref-height: 90px;
+}
+.setting-bx .label {
+	-fx-font-family: 'Montserrat';
+	-fx-font-size: 18px;
+	-fx-font-weight: 700;
+	-fx-text-fill: black;
+}
+.setting-bx .icon {
+	-fx-scale-x: 1.5;
+	-fx-scale-y: 1.5;
+	-fx-fill: #ffa600;
+}
+.setting-bx .icon.red {
+	-fx-fill: #e74c3c;
+}
+.setting-bx .icon.green {
+	-fx-fill: #2ecc71;
+}
+.setting-bx .bt {
+	-fx-text-fill: white;
+
+	-fx-min-width: 112;
+	-fx-min-height: 38px;
+	-fx-pref-height: 38;
+
+	-fx-font-size: 16px;
+	-fx-font-weight: 700;
+
+	-fx-padding: 8px 18px;
+	-fx-background-radius: 26px;
+
+	-fx-background-color: #00aced;
+	-fx-background-color: grey;
+	-fx-background-color: #002d42;
+}
+.setting-bx .combo-bx-config {
+	-fx-padding: 16 18;
+	-fx-spacing: 8px;
+}
+.setting-bx .combo-bx-config .combo-bx {
+	-fx-font-size: 14;
+	-fx-font-weight: 700;
+	-fx-alignment: center;
+
+	-fx-pref-width: 112;
+	-fx-pref-height: 38;
+	-fx-background-color: white;
+	-fx-background-radius: 18;
+	-fx-border-radius: 18;
+	-fx-border-color: #4d4d4d;
+	-jfx-focus-color: transparent; /* Remove focus underline color */
+	-jfx-unfocus-color: transparent; /* Remove unfocused underline color */
+}
+.setting-bx .combo-bx-config .combo-bx .text-field {
+	-fx-alignment: center;
+}
+.setting-bx .combo-bx-config .combo-bx > .prompt-container {
+	-fx-alignment: center;
+}
+.setting-bx .combo-box-popup .list-view {
+	-fx-background-radius: 12px; /* Apply rounded corners to the popup */
+	-fx-border-radius: 12px; /* Match the border radius */
+	-fx-translate-y: 2;
+}
+
+.notification-bx .label {
+	-fx-font-family: 'Montserrat';
+	-fx-font-size: 16px;
+	-fx-font-weight: 600;
+	-fx-text-fill: #e74c3c;
+	-fx-fill: #e74c3c;
+}

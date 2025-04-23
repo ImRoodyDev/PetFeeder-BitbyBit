@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.SVGPath?>
+
+<AnchorPane id="app-parent" fx:id="appView" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" styleClass="root" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bitbybit.controllers.DevicesController">
+
+    <AnchorPane styleClass="app-devices" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+        <StackPane fx:id="backgroundContainer" alignment="BOTTOM_RIGHT" styleClass="background" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      
+            <Pane prefHeight="200.0" prefWidth="200.0">
+         
+                <ImageView fitHeight="897.0" fitWidth="695.0" layoutX="548.0" layoutY="-238.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../images/path4.png" />
+                </ImageView>
+                <ImageView fitHeight="55.0" fitWidth="53.0" layoutX="183.0" layoutY="572.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/path5.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="170.0" fitWidth="62.0" layoutX="523.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true" rotate="63.4">
+                    <image>
+                        <Image url="@../images/path5.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="170.0" fitWidth="62.0" layoutX="481.0" layoutY="576.0" pickOnBounds="true" preserveRatio="true" rotate="-45.0">
+                    <image>
+                        <Image url="@../images/path5.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="170.0" fitWidth="62.0" layoutX="459.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/path5.png" />
+                    </image>
+                </ImageView>
+      
+            </Pane>
+            <ImageView fx:id="catImage" fitHeight="720.0" preserveRatio="true" styleClass="bg-image">
+                <image>
+                    <Image url="@../images/8623056.png" />
+                </image>
+            </ImageView>
+
+        </StackPane>
+        <BorderPane pickOnBounds="false" styleClass="container">
+            <top>
+                <HBox prefHeight="33.0" prefWidth="1120.0" styleClass="header" BorderPane.alignment="CENTER">
+
+                       <ImageView fitHeight="28.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true" styleClass="logo">
+                        <image>
+                            <Image url="@../images/logo.png" />
+                        </image>
+                    </ImageView>
+                    <ImageView fitHeight="24.0" fitWidth="260.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" styleClass="logo">
+                        <image>
+                            <Image url="@../images/bitbybit.png" />
+                        </image>
+                    </ImageView>
+
+                       <BorderPane.margin>
+                        <Insets />
+                    </BorderPane.margin>
+                </HBox>
+            </top>
+         <bottom>
+                <AnchorPane BorderPane.alignment="CENTER">
+
+                       <VBox alignment="TOP_CENTER" prefHeight="580.0" prefWidth="568.0" styleClass="elements" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+                                                   <VBox prefWidth="365.0">
+
+                                                       <Label prefHeight="52.0" prefWidth="452.0" text="Link Feeder" textAlignment="CENTER">
+                                <styleClass>
+                                    <String fx:value="h1-text" />
+                                    <String fx:value="medium" />
+                                </styleClass>
+                            </Label>
+                            <Label prefHeight="28.0" prefWidth="365.0" styleClass="span-text" text="Easily link your device and get started" />
+
+                                                   </VBox>
+                  <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="270.0" prefWidth="508.0" styleClass="scroll-parent">
+                     <content>
+                        <VBox maxWidth="1.7976931348623157E308" prefHeight="330.0" prefWidth="530.0" styleClass="scroll-container">
+                           <children>
+                              <JFXRadioButton graphicTextGap="28.0" prefHeight="51.0" prefWidth="606.0" styleClass="device" text="Device 001" textFill="RED">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="feeders" />
+                                 </toggleGroup>
+                                 <graphic>
+                                    <SVGPath content="m7.792.312-1.533 2.3A.25.25 0 0 0 6.467 3H7.5v7.319a2.5 2.5 0 0 0-.515-.298L5.909 9.56A1.5 1.5 0 0 1 5 8.18v-.266a1.5 1.5 0 1 0-1 0v.266a2.5 2.5 0 0 0 1.515 2.298l1.076.461a1.5 1.5 0 0 1 .888 1.129 2.001 2.001 0 1 0 1.021-.006v-.902a1.5 1.5 0 0 1 .756-1.303l1.484-.848A2.5 2.5 0 0 0 11.995 7h.755a.25.25 0 0 0 .25-.25v-2.5a.25.25 0 0 0-.25-.25h-2.5a.25.25 0 0 0-.25.25v2.5c0 .138.112.25.25.25h.741a1.5 1.5 0 0 1-.747 1.142L8.76 8.99a3 3 0 0 0-.26.17V3h1.033a.25.25 0 0 0 .208-.389L8.208.312a.25.25 0 0 0-.416 0" styleClass="icon" />
+                                 </graphic>
+                                 <selectedColor>
+                                    <Color red="0.39961013197898865" green="0.5394737124443054" blue="0.46954190731048584" />
+                                 </selectedColor>
+                              </JFXRadioButton>
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+                        <JFXButton onAction="#switchToHome" prefHeight="50.0" prefWidth="200.0" text="Link device">
+                            <styleClass>
+                                <String fx:value="bt" />
+                                <String fx:value="link" />
+                            </styleClass>
+                            <graphic>
+                                <SVGPath content="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z&#10;M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z" fill="WHITE" styleClass="icon" />
+                            </graphic>
+                        </JFXButton>
+
+   
+                       </VBox>
+
+                   </AnchorPane>
+         </bottom>
+        </BorderPane>
+
+    </AnchorPane>
+
+    <stylesheets>
+        <URL value="@../css/desktop/default.css" />
+        <URL value="@../css/desktop/view.css" />
+    </stylesheets>
+</AnchorPane>

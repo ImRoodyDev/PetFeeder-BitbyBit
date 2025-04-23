@@ -1,0 +1,95 @@
+# IDE specific folders
+.idea/
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+.idea/**/contentModel.xml
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+.idea/**/gradle.xml
+.idea/**/libraries
+.idea/artifacts
+.idea/compiler.xml
+.idea/jarRepositories.xml
+.idea/modules.xml
+.idea/*.iml
+.idea/modules
+.idea/sonarlint/
+.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+.history/
+*.vsix
+.ionide
+*.iml
+*.iws
+*.ipr
+
+# Maven specific
+.mvn/
+target/
+mvnw
+mvnw.cmd
+*.versionsBackup
+dependency-reduced-pom.xml
+
+# Node.js server dependencies
+**/node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+.npm/
+
+# JavaFX specific
+*.jfr
+
+# Java build artifacts
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+out/
+build/
+bin/
+dist/
+
+# Logs
+logs/
+*.log
+
+# OS specific files
+.DS_Store
+Thumbs.db
+.directory
+
+# Application specific
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Compiled CSS from SCSS/SASS
+*.css.map
+*.sass.map
+*.scss.map
+
+# Cache and temporary files
+.cache/
+.temp/
+.tmp/
+*.swp
+*.swo
+*~

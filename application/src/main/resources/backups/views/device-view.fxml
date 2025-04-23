@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane id="app-parent" fx:id="appView" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" styleClass="root" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bitbybit.controllers.DevicesController">
+	<AnchorPane styleClass="app-devices" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+		<StackPane fx:id="backgroundContainer" alignment="BOTTOM_RIGHT" styleClass="background" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+			<Pane prefHeight="200.0" prefWidth="200.0">
+
+				<ImageView fitHeight="897.0" fitWidth="695.0" layoutX="548.0" layoutY="-238.0" pickOnBounds="true" preserveRatio="true">
+					<Image url="@../images/path4.png" />
+				</ImageView>
+				<ImageView fitHeight="42.0" fitWidth="55.0" layoutX="183.0" layoutY="584.0" pickOnBounds="true" preserveRatio="true" visible="false">
+					<image>
+						<Image url="@../images/path5.png" />
+					</image>
+				</ImageView>
+				<ImageView fitHeight="47.0" fitWidth="62.0" layoutX="79.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true" rotate="63.4" visible="false">
+					<image>
+						<Image url="@../images/path5.png" />
+					</image>
+				</ImageView>
+				<ImageView fitHeight="56.0" fitWidth="42.0" layoutX="486.0" layoutY="581.0" pickOnBounds="true" preserveRatio="true" rotate="-45.0" visible="false">
+					<image>
+						<Image url="@../images/path5.png" />
+					</image>
+				</ImageView>
+				<ImageView fitHeight="170.0" fitWidth="62.0" layoutX="459.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true" visible="false">
+					<image>
+						<Image url="@../images/path5.png" />
+					</image>
+				</ImageView>
+
+			</Pane>
+			<ImageView fx:id="catImage" fitHeight="720.0" preserveRatio="true" styleClass="bg-image">
+				<image>
+					<Image url="@../images/8623056.png" />
+				</image>
+			</ImageView>
+
+		</StackPane>
+		<BorderPane pickOnBounds="false" styleClass="container">
+			<top>
+				<HBox prefHeight="33.0" prefWidth="1120.0" styleClass="header" BorderPane.alignment="CENTER">
+
+					<ImageView fitHeight="28.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true" styleClass="logo">
+						<image>
+							<Image url="@../images/logo.png" />
+						</image>
+					</ImageView>
+					<ImageView fitHeight="24.0" fitWidth="260.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" styleClass="logo">
+						<image>
+							<Image url="@../images/bitbybit.png" />
+						</image>
+					</ImageView>
+
+					<BorderPane.margin>
+						<Insets />
+					</BorderPane.margin>
+				</HBox>
+			</top>
+			<bottom>
+				<AnchorPane fx:id="pageView" styleClass="device-link" BorderPane.alignment="CENTER" />
+			</bottom>
+		</BorderPane>
+
+	</AnchorPane>
+
+	<stylesheets>
+		<URL value="@../css/default.css" />
+		<URL value="@../css/view.css" />
+	</stylesheets>
+</AnchorPane>

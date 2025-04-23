@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.SVGPath?>
+
+<StackPane alignment="TOP_LEFT" prefHeight="53.0" prefWidth="628.0" styleClass="schedule-bx" stylesheets="@../css/desktop/customs.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefWidth="678.0" spacing="20.0">
+         <StackPane.margin>
+            <Insets />
+         </StackPane.margin>
+         <children>
+            <StackPane prefHeight="70.0" prefWidth="43.0" styleClass="icon-parent" HBox.hgrow="NEVER">
+               <children>
+                  <SVGPath content="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" styleClass="icon" StackPane.alignment="CENTER" />
+               </children>
+            </StackPane>
+            <AnchorPane HBox.hgrow="ALWAYS">
+               <children>
+                  <Label fx:id="timeLabel" focusTraversable="false" mouseTransparent="true" prefHeight="70.0" prefWidth="171.0" text="Tijdstip 1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <HBox prefHeight="70.0" styleClass="time-config">
+               <children>
+                  <JFXComboBox fx:id="hoursCombo" prefHeight="70.0" prefWidth="112.0" promptText="Hours" styleClass="time" HBox.hgrow="ALWAYS" />
+                  <JFXComboBox fx:id="minutesCombo" prefHeight="70.0" prefWidth="112.0" promptText="Minutes" styleClass="time" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <JFXButton fx:id="deleteButton" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0" text="remove">
+               <styleClass>
+                  <String fx:value="add" />
+                  <String fx:value="remove" />
+               </styleClass>
+               <graphic>
+                  <SVGPath content="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" styleClass="dlt-icon" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</StackPane>

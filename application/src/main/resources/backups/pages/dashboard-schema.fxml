@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXClippedPane?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.SVGPath?>
+
+
+<HBox styleClass="elements2" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox styleClass="schedules-container" HBox.hgrow="ALWAYS">
+         <children>
+            <HBox alignment="CENTER_LEFT" styleClass="schedules-header">
+               <children>
+                  <AnchorPane HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="Setup your schedule" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <JFXButton text="+">
+                     <styleClass>
+                        <String fx:value="bt" />
+                        <String fx:value="add" />
+                     </styleClass>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <VBox fx:id="scheduleList" styleClass="schedule-list" VBox.vgrow="ALWAYS">
+               <children>
+                  <StackPane alignment="TOP_LEFT" prefHeight="53.0" prefWidth="628.0" styleClass="schedule-bx">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefWidth="678.0" spacing="20.0">
+                           <StackPane.margin>
+                              <Insets />
+                           </StackPane.margin>
+                           <children>
+                              <StackPane prefHeight="70.0" prefWidth="43.0" styleClass="icon-parent" HBox.hgrow="NEVER">
+                                 <children>
+                                    <SVGPath content="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" styleClass="icon" StackPane.alignment="CENTER" />
+                                 </children>
+                              </StackPane>
+                              <AnchorPane HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label fx:id="timeLabel" focusTraversable="false" mouseTransparent="true" prefHeight="70.0" prefWidth="171.0" text="Tijdstip 1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <HBox prefHeight="70.0" styleClass="time-config">
+                                 <children>
+                                    <JFXComboBox fx:id="hourCombo" prefHeight="70.0" prefWidth="112.0" promptText="Hours" styleClass="time" HBox.hgrow="ALWAYS" />
+                                    <JFXComboBox fx:id="minutesCombo" prefHeight="70.0" prefWidth="112.0" promptText="Minutes" styleClass="time" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <JFXButton fx:id="deleteButton" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0" text="remove">
+                                 <styleClass>
+                                    <String fx:value="add" />
+                                    <String fx:value="remove" />
+                                 </styleClass>
+                                 <graphic>
+                                    <SVGPath content="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" styleClass="dlt-icon" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </StackPane>
+                  <StackPane alignment="TOP_LEFT" layoutX="18.0" layoutY="18.0" prefHeight="53.0" prefWidth="628.0" styleClass="schedule-bx">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefWidth="678.0" spacing="20.0">
+                           <StackPane.margin>
+                              <Insets />
+                           </StackPane.margin>
+                           <children>
+                              <StackPane prefHeight="70.0" prefWidth="43.0" styleClass="icon-parent" HBox.hgrow="NEVER">
+                                 <children>
+                                    <SVGPath content="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" styleClass="icon" StackPane.alignment="CENTER" />
+                                 </children>
+                              </StackPane>
+                              <AnchorPane HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label fx:id="timeLabel1" focusTraversable="false" mouseTransparent="true" prefHeight="70.0" prefWidth="171.0" text="Tijdstip 1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <HBox prefHeight="70.0" styleClass="time-config">
+                                 <children>
+                                    <JFXComboBox fx:id="hourCombo1" prefHeight="70.0" prefWidth="112.0" promptText="Hours" styleClass="time" HBox.hgrow="ALWAYS" />
+                                    <JFXComboBox fx:id="minutesCombo1" prefHeight="70.0" prefWidth="112.0" promptText="Minutes" styleClass="time" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <JFXButton fx:id="deleteButton1" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0" text="remove">
+                                 <styleClass>
+                                    <String fx:value="add" />
+                                    <String fx:value="remove" />
+                                 </styleClass>
+                                 <graphic>
+                                    <SVGPath content="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" styleClass="dlt-icon" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </StackPane>
+                  <StackPane alignment="TOP_LEFT" layoutX="18.0" layoutY="96.0" prefHeight="53.0" prefWidth="628.0" styleClass="schedule-bx">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefWidth="678.0" spacing="20.0">
+                           <StackPane.margin>
+                              <Insets />
+                           </StackPane.margin>
+                           <children>
+                              <StackPane prefHeight="70.0" prefWidth="43.0" styleClass="icon-parent" HBox.hgrow="NEVER">
+                                 <children>
+                                    <SVGPath content="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" styleClass="icon" StackPane.alignment="CENTER" />
+                                 </children>
+                              </StackPane>
+                              <AnchorPane HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label fx:id="timeLabel11" focusTraversable="false" mouseTransparent="true" prefHeight="70.0" prefWidth="171.0" text="Tijdstip 1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <HBox prefHeight="70.0" styleClass="time-config">
+                                 <children>
+                                    <JFXComboBox fx:id="hourCombo11" prefHeight="70.0" prefWidth="112.0" promptText="Hours" styleClass="time" HBox.hgrow="ALWAYS" />
+                                    <JFXComboBox fx:id="minutesCombo11" prefHeight="70.0" prefWidth="112.0" promptText="Minutes" styleClass="time" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <JFXButton fx:id="deleteButton11" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0" text="remove">
+                                 <styleClass>
+                                    <String fx:value="add" />
+                                    <String fx:value="remove" />
+                                 </styleClass>
+                                 <graphic>
+                                    <SVGPath content="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" styleClass="dlt-icon" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </StackPane>
+                  <StackPane alignment="TOP_LEFT" layoutX="18.0" layoutY="174.0" prefHeight="53.0" prefWidth="628.0" styleClass="schedule-bx">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefWidth="678.0" spacing="20.0">
+                           <StackPane.margin>
+                              <Insets />
+                           </StackPane.margin>
+                           <children>
+                              <StackPane prefHeight="70.0" prefWidth="43.0" styleClass="icon-parent" HBox.hgrow="NEVER">
+                                 <children>
+                                    <SVGPath content="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" styleClass="icon" StackPane.alignment="CENTER" />
+                                 </children>
+                              </StackPane>
+                              <AnchorPane HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label fx:id="timeLabel111" focusTraversable="false" mouseTransparent="true" prefHeight="70.0" prefWidth="171.0" text="Tijdstip 1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <HBox prefHeight="70.0" styleClass="time-config">
+                                 <children>
+                                    <JFXComboBox fx:id="hourCombo111" prefHeight="70.0" prefWidth="112.0" promptText="Hours" styleClass="time" HBox.hgrow="ALWAYS" />
+                                    <JFXComboBox fx:id="minutesCombo111" prefHeight="70.0" prefWidth="112.0" promptText="Minutes" styleClass="time" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <JFXButton fx:id="deleteButton111" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0" text="remove">
+                                 <styleClass>
+                                    <String fx:value="add" />
+                                    <String fx:value="remove" />
+                                 </styleClass>
+                                 <graphic>
+                                    <SVGPath content="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" styleClass="dlt-icon" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </StackPane>
+                  <StackPane alignment="TOP_LEFT" layoutX="18.0" layoutY="252.0" prefHeight="53.0" prefWidth="628.0" styleClass="schedule-bx">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefWidth="678.0" spacing="20.0">
+                           <StackPane.margin>
+                              <Insets />
+                           </StackPane.margin>
+                           <children>
+                              <StackPane prefHeight="70.0" prefWidth="43.0" styleClass="icon-parent" HBox.hgrow="NEVER">
+                                 <children>
+                                    <SVGPath content="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" styleClass="icon" StackPane.alignment="CENTER" />
+                                 </children>
+                              </StackPane>
+                              <AnchorPane HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label fx:id="timeLabel1111" focusTraversable="false" mouseTransparent="true" prefHeight="70.0" prefWidth="171.0" text="Tijdstip 1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <HBox prefHeight="70.0" styleClass="time-config">
+                                 <children>
+                                    <JFXComboBox fx:id="hourCombo1111" prefHeight="70.0" prefWidth="112.0" promptText="Hours" styleClass="time" HBox.hgrow="ALWAYS" />
+                                    <JFXComboBox fx:id="minutesCombo1111" prefHeight="70.0" prefWidth="112.0" promptText="Minutes" styleClass="time" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <JFXButton fx:id="deleteButton1111" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0" text="remove">
+                                 <styleClass>
+                                    <String fx:value="add" />
+                                    <String fx:value="remove" />
+                                 </styleClass>
+                                 <graphic>
+                                    <SVGPath content="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" styleClass="dlt-icon" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </StackPane>
+                  <StackPane alignment="TOP_LEFT" layoutX="18.0" layoutY="330.0" prefHeight="53.0" prefWidth="628.0" styleClass="schedule-bx">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefWidth="678.0" spacing="20.0">
+                           <StackPane.margin>
+                              <Insets />
+                           </StackPane.margin>
+                           <children>
+                              <StackPane prefHeight="70.0" prefWidth="43.0" styleClass="icon-parent" HBox.hgrow="NEVER">
+                                 <children>
+                                    <SVGPath content="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" styleClass="icon" StackPane.alignment="CENTER" />
+                                 </children>
+                              </StackPane>
+                              <AnchorPane HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label fx:id="timeLabel11111" focusTraversable="false" mouseTransparent="true" prefHeight="70.0" prefWidth="171.0" text="Tijdstip 1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <HBox prefHeight="70.0" styleClass="time-config">
+                                 <children>
+                                    <JFXComboBox fx:id="hourCombo11111" prefHeight="70.0" prefWidth="112.0" promptText="Hours" styleClass="time" HBox.hgrow="ALWAYS" />
+                                    <JFXComboBox fx:id="minutesCombo11111" prefHeight="70.0" prefWidth="112.0" promptText="Minutes" styleClass="time" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <JFXButton fx:id="deleteButton11111" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0" text="remove">
+                                 <styleClass>
+                                    <String fx:value="add" />
+                                    <String fx:value="remove" />
+                                 </styleClass>
+                                 <graphic>
+                                    <SVGPath content="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" styleClass="dlt-icon" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </StackPane>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="20.0" prefWidth="644.0">
+               <children>
+                  <JFXButton text="Save">
+                     <styleClass>
+                        <String fx:value="bt" />
+                        <String fx:value="save" />
+                     </styleClass>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <JFXClippedPane prefWidth="500.0" styleClass="dash-cat">
+         <children>
+            <Pane prefHeight="664.0" prefWidth="268.0">
+               <children>
+                  <Circle fill="#3eb5ef" layoutX="250.0" layoutY="-33.0" radius="247.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <ImageView fitHeight="355.0" fitWidth="467.0" layoutX="-172.0" layoutY="144.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/waves.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="578.0" fitWidth="637.0" layoutX="-8.0" layoutY="63.0" nodeOrientation="RIGHT_TO_LEFT" preserveRatio="true" styleClass="image">
+                     <image>
+                        <Image url="@../images/catHi.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="97.0" fitWidth="91.0" layoutX="131.0" layoutY="317.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../images/vector.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="54.0" fitWidth="52.0" layoutX="29.0" layoutY="558.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/star.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="48.0" fitWidth="44.0" layoutX="430.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/star.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="94.0" fitWidth="96.0" layoutX="295.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/spring-blue.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="89.0" layoutY="30.0" text="Food schedule" textFill="WHITE" />
+               </children>
+            </Pane>
+         </children>
+      </JFXClippedPane>
+   </children>
+</HBox>

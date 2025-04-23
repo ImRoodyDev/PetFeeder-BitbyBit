@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+
+<VBox alignment="TOP_CENTER" prefHeight="580.0" prefWidth="568.0" styleClass="elements" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefWidth="365.0">
+         <children>
+            <Label prefHeight="52.0" prefWidth="452.0" text="Link Feeder" textAlignment="CENTER">
+               <styleClass>
+                  <String fx:value="h1-text" />
+                  <String fx:value="medium" />
+               </styleClass>
+            </Label>
+            <Label prefHeight="28.0" prefWidth="365.0" styleClass="span-text" text="Easily link your device and get started" />
+         </children>
+      </VBox>
+      <JFXButton fx:id="searchButton" onAction="#searchBluetoothDevices" text="Search for devices">
+         <styleClass>
+            <String fx:value="bt" />
+            <String fx:value="search-devices" />
+         </styleClass>
+         <graphic>
+            <SVGPath fx:id="searchBtSpinner" content="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z&#10;M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466" fill="WHITE" styleClass="icon" />
+         </graphic>
+      </JFXButton>
+      <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="270.0" prefWidth="508.0" styleClass="scroll-parent">
+         <content>
+            <VBox fx:id="deviceList" prefWidth="522.0" styleClass="scroll-container" />
+         </content>
+      </ScrollPane>
+      <JFXButton fx:id="connectButton" onAction="#connectDevice" text="Connect Device">
+         <styleClass>
+            <String fx:value="bt" />
+            <String fx:value="link" />
+         </styleClass>
+      </JFXButton>
+   </children>
+</VBox>

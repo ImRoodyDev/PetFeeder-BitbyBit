@@ -1,0 +1,351 @@
+/*.app-home {
+}*/
+.app-home .background .bg-image {
+	-fx-fit-height: 720px;
+}
+.app-home .container {
+	-fx-padding: 20px 80px;
+}
+.app-home .container .header {
+	-fx-spacing: 20px;
+	-fx-alignment: center-left;
+	-fx-min-height: 100px;
+	-fx-pref-height: 100px;
+}
+.app-home .container .header .logo {
+	-fx-fit-height: 30px;
+}
+.app-home .container .elements {
+	-fx-padding: 80px 0px 20px 0px;
+	-fx-spacing: 8px;
+}
+.app-home .container .elements .h1-text {
+	-fx-font-family: 'Montserrat';
+	-fx-font-size: 52px;
+	-fx-font-weight: 600;
+}
+.app-home .container .elements .h1-text.medium {
+	-fx-font-weight: 700;
+}
+.app-home .container .elements .h1-text.theme {
+	-fx-font-color: #00aced;
+}
+.app-home .container .elements .bt {
+	-fx-text-fill: white;
+
+	-fx-min-width: 140px;
+	-fx-min-height: 50px;
+
+	-fx-font-size: 19px;
+	-fx-font-weight: 700;
+
+	-fx-padding: 12px 18px;
+	-fx-background-radius: 26px;
+}
+.app-home .container .elements .bt.get-started {
+	/*-fx-background-color: #33c9ff;*/
+	-fx-background-color: #00aced;
+}
+.app-home .container .elements .bt.login {
+	/*-fx-background-color: rgb(172, 172, 172);*/
+	-fx-background-color: grey;
+}
+.app-home .container .elements .bt.get-started:hover {
+	-fx-background-color: #00aced;
+}
+.app-home .container .elements .bt.login:hover {
+	-fx-background-color: grey;
+}
+
+/*.app-login {
+}*/
+.app-login .background .bg-image {
+	-fx-fit-height: 720px;
+}
+.app-login .container {
+	-fx-padding: 20px 80px;
+}
+.app-login .container .header {
+	-fx-spacing: 20px;
+	-fx-alignment: center-left;
+	-fx-min-height: 100px;
+	-fx-pref-height: 100px;
+}
+.app-login .container .header .logo {
+	-fx-fit-height: 30px;
+}
+.app-login .container .elements {
+	-fx-padding: 80px 0px 20px 0px;
+	-fx-spacing: 20px;
+}
+.app-login .container .elements .h1-text {
+	-fx-font-family: 'Montserrat';
+	-fx-font-size: 42px;
+	-fx-font-weight: 600;
+}
+.app-login .container .elements .span-text {
+	-fx-font-family: 'Montserrat';
+	-fx-font-size: 16px;
+	-fx-font-weight: 600;
+}
+.app-login .container .elements .h1-text.medium {
+	-fx-font-weight: 700;
+}
+.app-login .container .elements .h1-text.theme {
+	-fx-font-color: #00aced;
+}
+.app-login .container .elements .bt {
+	-fx-text-fill: white;
+
+	-fx-min-width: 140px;
+	-fx-min-height: 50px;
+
+	-fx-font-size: 19px;
+	-fx-font-weight: 700;
+
+	-fx-padding: 12px 18px;
+	-fx-background-radius: 26px;
+}
+.app-login .container .elements .bt.login {
+	/*-fx-background-color: #33c9ff;*/
+	-fx-background-color: #00aced;
+}
+.app-login .container .elements .bt.login:hover {
+	-fx-background-color: #00aced;
+}
+.app-login .container .elements .fd .icon {
+	-fx-view-order: -1;
+	-fx-scale-x: 1.3;
+	-fx-scale-y: 1.3;
+	-fx-translate-x: 30;
+	-fx-fill: grey;
+}
+.app-login .container .elements .fd .field {
+	-fx-background-color: #f2f2f2;
+	-fx-view-order: 0;
+	-fx-border-width: 0;
+
+	-fx-min-width: 140px;
+	-fx-min-height: 50px;
+
+	-fx-font-size: 18px;
+	-fx-font-weight: 600;
+
+	-fx-padding: 12px 45px;
+	-fx-background-radius: 8px;
+}
+
+/*.app-register {
+}*/
+.app-register .background .bg-image {
+	-fx-fit-height: 720px;
+}
+.app-register .container {
+	-fx-padding: 20px 80px;
+}
+.app-register .container .header {
+	-fx-spacing: 20px;
+	-fx-alignment: center-left;
+	-fx-min-height: 100px;
+	-fx-pref-height: 100px;
+}
+.app-register .container .header .logo {
+	-fx-fit-height: 30px;
+}
+.app-register .container .elements {
+	-fx-padding: 80px 0px 20px 0px;
+	-fx-spacing: 20px;
+}
+.app-register .container .elements .h1-text {
+	-fx-font-family: 'Montserrat';
+	-fx-font-size: 42px;
+	-fx-font-weight: 600;
+}
+.app-register .container .elements .span-text {
+	-fx-font-family: 'Montserrat';
+	-fx-font-size: 16px;
+	-fx-font-weight: 600;
+}
+.app-register .container .elements .h1-text.medium {
+	-fx-font-weight: 700;
+}
+.app-register .container .elements .h1-text.theme {
+	-fx-font-color: #00aced;
+}
+.app-register .container .elements .bt {
+	-fx-text-fill: white;
+
+	-fx-min-width: 140px;
+	-fx-min-height: 50px;
+
+	-fx-font-size: 19px;
+	-fx-font-weight: 700;
+
+	-fx-padding: 12px 18px;
+	-fx-background-radius: 26px;
+}
+.app-register .container .elements .bt.login {
+	/*-fx-background-color: #33c9ff;*/
+	-fx-background-color: #00aced;
+}
+.app-register .container .elements .bt.login:hover {
+	-fx-background-color: #00aced;
+}
+.app-register .container .elements .fd .icon {
+	-fx-view-order: -1;
+	-fx-scale-x: 1.3;
+	-fx-scale-y: 1.3;
+	-fx-translate-x: 30;
+	-fx-fill: grey;
+}
+.app-register .container .elements .fd .field {
+	-fx-background-color: #f2f2f2;
+	-fx-view-order: 0;
+	-fx-border-width: 0;
+
+	-fx-min-width: 140px;
+	-fx-min-height: 50px;
+
+	-fx-font-size: 18px;
+	-fx-font-weight: 600;
+
+	-fx-padding: 12px 45px;
+	-fx-background-radius: 8px;
+}
+
+/*.app-devices {
+}*/
+.app-devices .background .bg-image {
+	-fx-fit-height: 720px;
+}
+.app-devices .container {
+	-fx-padding: 20px 80px;
+}
+.app-devices .container .header {
+	-fx-spacing: 20px;
+	-fx-alignment: center-left;
+	-fx-min-height: 100px;
+	-fx-pref-height: 100px;
+}
+.app-devices .container .header .logo {
+	-fx-fit-height: 30px;
+}
+.app-devices .container .back-bt {
+	-fx-background-color: #e74c3c;
+	-fx-background-radius: 26px;
+
+	-fx-min-width: 40px;
+	-fx-min-height: 40px;
+
+	-fx-font-size: 18px;
+	-fx-font-weight: 700;
+
+	-fx-padding: 12px;
+}
+.app-devices .container .back-bt .icon {
+	-fx-fill: white;
+}
+/*.app-devices .container .elements2 .mfx-progress-spinner {
+}*/
+
+.app-dashboard {
+	-fx-border-radius: 18;
+	-fx-background-radius: 18;
+}
+.app-dashboard .background .bg-image {
+	-fx-fit-height: 720px;
+}
+.app-dashboard .container {
+	-fx-padding: 0px;
+}
+.app-dashboard .container .header {
+	-fx-pref-height: 60px;
+	-fx-max-height: 60px;
+
+	-fx-padding: 0 0 0px 0px;
+	-fx-spacing: 20px;
+	-fx-alignment: center-left;
+}
+.app-dashboard .container .header .logo-parent {
+	-fx-padding: 0px 0 0 8px;
+	-fx-pref-width: 60px;
+}
+.app-dashboard .container .header .logo-parent .logo {
+	-fx-fit-height: 20px;
+}
+.app-dashboard .container .header .controls {
+	-fx-padding: 0 0 0px 0px;
+}
+.app-dashboard .container .header .controls .control-bt {
+	-fx-pref-width: 60px;
+	-fx-pref-height: 60px;
+	-fx-background-color: white;
+}
+.app-dashboard .container .header .controls .control-bt .jfx-rippler {
+	-jfx-rippler-fill: #919191;
+}
+.app-dashboard .container .header .controls .control-bt .icon {
+	-fx-scale-x: 1;
+	-fx-scale-y: 1;
+	/*-fx-fill: #999999;*/
+}
+.app-dashboard .container .header .controls .control-bt:hover {
+	-fx-background-color: #eaeaea;
+}
+.app-dashboard .container .header .controls .control-bt.close:hover {
+	-fx-background-color: #ed1b2f;
+}
+.app-dashboard .container .header .top-dash {
+	-fx-spacing: 20;
+}
+.app-dashboard .container .header .top-dash .title {
+	-fx-font-family: 'Montserrat';
+	-fx-font-size: 15px;
+	-fx-font-weight: 700;
+	-fx-text-fill: #aeaeae;
+}
+.app-dashboard .container .header .top-dash .profile {
+	-fx-pref-width: 44px;
+	-fx-pref-height: 44px;
+	-fx-padding: 1px;
+	-fx-background-radius: 50%;
+	-fx-background-color: #eaeaea;
+}
+.app-dashboard .container .header .top-dash .profile .profile-image {
+	-fx-stroke-width: 0px;
+}
+.app-dashboard .container .side-bar {
+	-fx-padding: 0 0 20px 0;
+	-fx-pref-width: 60px;
+	-fx-spacing: 4px;
+}
+.app-dashboard .container .side-bar .bar-bt {
+	-fx-pref-height: 60px;
+	-fx-pref-width: 60px;
+	-fx-padding: 12px 0;
+	-fx-font-family: 'Montserrat';
+	-fx-text-fill: #999999;
+	-fx-background-radius: 12 0 0 12;
+	-fx-content-display: graphic_only;
+}
+.app-dashboard .container .side-bar .bar-bt .icon {
+	-fx-fill: #999999;
+	-fx-scale-x: 0.8;
+	-fx-scale-y: 0.8;
+}
+.app-dashboard .container .side-bar .bar-bt:hover {
+	-fx-background-color: #eaeaea;
+}
+.app-dashboard .container .side-bar .bar-bt.selected {
+	-fx-text-fill: #00aced;
+	/*-fx-background-color: #eaeaea;*/
+}
+.app-dashboard .container .side-bar .bar-bt.selected .icon {
+	-fx-fill: #00aced;
+}
+.app-dashboard .container .page-view {
+	-fx-background-color: #f9f9f9;
+	-fx-background-radius: 18 0 18 0;
+	-fx-border-radius: 18 0 18 0;
+	-fx-padding: 12px;
+}

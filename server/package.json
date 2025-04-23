@@ -1,0 +1,34 @@
+{
+	"name": "bitbybit-server",
+	"version": "1.0.0",
+	"description": "Server for authentication and logging feeder data",
+	"main": "index.js",
+	"scripts": {
+		"start": "nodemon index.js && sequelize-cli db:seed:all",
+		"dev": "nodemon index.js",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"seed:all": "sequelize-cli db:seed:all"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"bcrypt": "^5.1.1",
+		"cookie-parser": "^1.4.7",
+		"cors": "^2.8.5",
+		"dotenv": "^16.4.7",
+		"express": "^4.21.1",
+		"express-session": "^1.18.1",
+		"joi": "^17.13.3",
+		"joi-password-complexity": "^5.2.0",
+		"jsonwebtoken": "^9.0.2",
+		"mysql2": "^3.11.5",
+		"sequelize": "^6.37.5",
+		"validator": "^13.12.0",
+		"ws": "^8.18.0"
+	},
+	"devDependencies": {
+		"depcheck": "^1.4.7",
+		"nodemon": "^3.1.7",
+		"sequelize-cli": "^6.6.2"
+	}
+}

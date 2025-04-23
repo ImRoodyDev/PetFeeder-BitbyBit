@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="app-parent" fx:id="appView" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" styleClass="root" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bitbybit.controllers.DashboardController">
+    <AnchorPane styleClass="app-dashboard" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+        <StackPane fx:id="backgroundContainer" alignment="BOTTOM_RIGHT" styleClass="background" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+            <Pane opacity="0.05" prefHeight="200.0" prefWidth="200.0" />
+
+        </StackPane>
+
+        <BorderPane pickOnBounds="false" prefHeight="720.0" prefWidth="1280.0" styleClass="container" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <HBox alignment="CENTER_LEFT" fillHeight="false" maxHeight="60.0" prefHeight="60.0" prefWidth="1280.0" styleClass="header" BorderPane.alignment="CENTER_LEFT">
+               <StackPane prefHeight="106.0" styleClass="logo-parent">
+                  <children>
+      
+                                <ImageView fitHeight="28.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true" styleClass="logo">
+                              <image>
+                                  <Image url="@../images/logo.png" />
+                              </image>
+                          </ImageView>
+                  </children>
+               </StackPane>
+               <HBox alignment="CENTER_LEFT" styleClass="top-dash">
+                  <children>
+                     <MenuButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" mnemonicParsing="false" styleClass="profile" textAlignment="CENTER">
+                       <items>
+                         <MenuItem mnemonicParsing="false" text="Logout" />
+                         <MenuItem mnemonicParsing="false" text="Action 2" />
+                       </items>
+                        <graphic>
+                           <Circle fx:id="profileImage" fill="WHITE" radius="20.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="profile-image" />
+                        </graphic>
+                     </MenuButton>
+                     <Label fx:id="dashboardLabel" styleClass="title" text="Welcome! Explore your dashboard" />
+                  </children>
+               </HBox>
+               <StackPane alignment="CENTER_RIGHT" styleClass="controls" HBox.hgrow="ALWAYS">
+                  <children>
+                     <HBox fx:id="dragArea" alignment="CENTER_RIGHT" maxHeight="44.0" prefHeight="44.0" prefWidth="449.0">
+                        <children>
+                           <JFXButton fx:id="toggleMinimizeButton" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" prefHeight="44.0" prefWidth="56.0">
+                              <graphic>
+                                 <SVGPath content="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8" styleClass="icon" />
+                              </graphic>
+                              <styleClass>
+                                 <String fx:value="control-bt" />
+                                 <String fx:value="minimize" />
+                              </styleClass>
+                              <HBox.margin>
+                                 <Insets left="12.0" />
+                              </HBox.margin>
+                           </JFXButton>
+                           <JFXButton fx:id="toggleMaximizeButton" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" layoutX="1154.0" layoutY="10.0" prefHeight="44.0" prefWidth="56.0" styleClass="control-bt">
+                              <graphic>
+                                 <SVGPath content="M4.5 6a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1M6 6a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0&#10;M12 1a2 2 0 0 1 2 2 2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2 2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zM2 12V5a2 2 0 0 1 2-2h9a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1m1-4v5a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V8zm12-1V5a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v2z" nodeOrientation="RIGHT_TO_LEFT" styleClass="icon" />
+                              </graphic>
+                           </JFXButton>
+                           <JFXButton fx:id="closeWindowButton" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" layoutX="1154.0" layoutY="10.0" prefHeight="44.0" prefWidth="56.0">
+                              <graphic>
+                                 <SVGPath content="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" styleClass="icon" />
+                              </graphic>
+                              <styleClass>
+                                 <String fx:value="control-bt" />
+                                 <String fx:value="close" />
+                              </styleClass>
+                           </JFXButton>
+                        </children>
+                     </HBox>
+                  </children>
+               </StackPane>
+
+                    <BorderPane.margin>
+                        <Insets />
+                    </BorderPane.margin>
+                </HBox>
+            </top>
+         <left>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="side-bar" BorderPane.alignment="CENTER">
+               <children>
+                   <JFXButton alignment="CENTER" contentDisplay="TOP" defaultButton="true" graphicTextGap="12.0" prefHeight="48.0" prefWidth="68.0" text="Dashboard">
+                       <graphic>
+                           <SVGPath content="M7.30769 19.2858V14.2789C7.30769 13.929 7.67308 13.5718 8.03846 13.5718H10.9615C11.3269 13.5718 11.6923 13.929 11.6923 14.2861V19.2858C11.6923 19.4752 11.7693 19.6569 11.9063 19.7908C12.0434 19.9248 12.2293 20 12.4231 20H18.2692C18.463 20 18.6489 19.9248 18.786 19.7908C18.923 19.6569 19 19.4752 19 19.2858V9.2864C19.0002 9.19254 18.9814 9.09957 18.9448 9.0128C18.9082 8.92603 18.8544 8.84717 18.7866 8.78072L16.8077 6.84798V2.144C16.8077 1.95457 16.7307 1.7729 16.5937 1.63895C16.4566 1.50501 16.2707 1.42976 16.0769 1.42976H14.6154C14.4216 1.42976 14.2357 1.50501 14.0987 1.63895C13.9616 1.7729 13.8846 1.95457 13.8846 2.144V3.99102L10.0174 0.209835C9.9495 0.14332 9.86886 0.0905481 9.78008 0.0545412C9.6913 0.0185342 9.59612 0 9.5 0C9.40388 0 9.3087 0.0185342 9.21992 0.0545412C9.13114 0.0905481 9.0505 0.14332 8.98262 0.209835L0.213386 8.78072C0.145568 8.84717 0.0918151 8.92603 0.0552011 9.0128C0.0185871 9.09957 -0.000170342 9.19254 1.16557e-06 9.2864V19.2858C1.16557e-06 19.4752 0.0769927 19.6569 0.214038 19.7908C0.351084 19.9248 0.536958 20 0.73077 20H6.57692C6.77074 20 6.95661 19.9248 7.09365 19.7908C7.2307 19.6569 7.30769 19.4752 7.30769 19.2858Z&#10;" styleClass="icon" />
+                       </graphic>
+                     <styleClass>
+                        <String fx:value="bar-bt" />
+                        <String fx:value="selected" />
+                     </styleClass>
+                   </JFXButton>
+                   <JFXButton alignment="CENTER" contentDisplay="TOP" graphicTextGap="12.0" prefHeight="48.0" prefWidth="68.0" styleClass="bar-bt" text="Schema">
+                       <graphic>
+                           <SVGPath content="M16.0625 2.875C16.0625 2.49375 16.214 2.12812 16.4835 1.85853C16.7531 1.58895 17.1188 1.4375 17.5 1.4375H20.375C20.7562 1.4375 21.1219 1.58895 21.3915 1.85853C21.661 2.12812 21.8125 2.49375 21.8125 2.875V20.125H22.5312C22.7219 20.125 22.9047 20.2007 23.0395 20.3355C23.1743 20.4703 23.25 20.6531 23.25 20.8438C23.25 21.0344 23.1743 21.2172 23.0395 21.352C22.9047 21.4868 22.7219 21.5625 22.5312 21.5625H0.96875C0.778126 21.5625 0.595309 21.4868 0.460517 21.352C0.325725 21.2172 0.25 21.0344 0.25 20.8438C0.25 20.6531 0.325725 20.4703 0.460517 20.3355C0.595309 20.2007 0.778126 20.125 0.96875 20.125H1.6875V15.8125C1.6875 15.4313 1.83895 15.0656 2.10853 14.796C2.37812 14.5265 2.74375 14.375 3.125 14.375H6C6.38125 14.375 6.74688 14.5265 7.01647 14.796C7.28605 15.0656 7.4375 15.4313 7.4375 15.8125V20.125H8.875V10.0625C8.875 9.68125 9.02645 9.31562 9.29603 9.04603C9.56562 8.77645 9.93125 8.625 10.3125 8.625H13.1875C13.5687 8.625 13.9344 8.77645 14.204 9.04603C14.4735 9.31562 14.625 9.68125 14.625 10.0625V20.125H16.0625V2.875Z&#10;" styleClass="icon" />
+                       </graphic>
+                   </JFXButton>
+                   <JFXButton alignment="CENTER" contentDisplay="TOP" graphicTextGap="12.0" prefHeight="48.0" prefWidth="68.0" styleClass="bar-bt" text="Kat profile">
+                       <graphic>
+                           <SVGPath content="M21.463 2.465C20.785 2.166 20.037 2 19.25 2C18.463 2 17.715 2.167 17.037 2.465L13.75 0V7.5C13.75 10.533 16.217 13 19.25 13C22.283 13 24.75 10.533 24.75 7.5V0L21.463 2.465ZM22.75 22H24.75V24H18.75V22C18.75 18.691 16.059 16 12.75 16V18C14.956 18 16.75 19.794 16.75 22V24H7.308C4.084 24 0.75 21.942 0.75 18.5C0.75 16.365 1.695 14.841 2.529 13.496C3.184 12.44 3.75 11.527 3.75 10.5C3.75 9.202 3.387 8 0.75 8V6C5.101 6 5.75 8.819 5.75 10.5C5.75 12.097 4.977 13.344 4.229 14.551C3.469 15.777 2.75 16.935 2.75 18.5C2.75 20.291 4.217 21.351 5.747 21.779C5.754 20.48 6.111 13.793 12.466 10.702C13.667 13.243 16.253 15.001 19.25 15.001C20.514 15.001 21.705 14.688 22.75 14.135V22Z&#10;" styleClass="icon" />
+                       </graphic>
+                   </JFXButton>
+                   <JFXButton alignment="CENTER" contentDisplay="TOP" graphicTextGap="12.0" prefHeight="48.0" prefWidth="68.0" styleClass="bar-bt" text="Instelling">
+                       <graphic>
+                           <SVGPath content="M14.1075 1.575C13.488 -0.525 10.512 -0.525 9.8925 1.575L9.7425 2.085C9.64994 2.39939 9.48818 2.68908 9.26909 2.93282C9.05 3.17656 8.77913 3.36817 8.47634 3.4936C8.17356 3.61902 7.84654 3.67509 7.51927 3.65768C7.192 3.64028 6.87277 3.54984 6.585 3.393L6.12 3.138C4.1955 2.091 2.091 4.1955 3.1395 6.1185L3.393 6.585C4.062 7.815 3.4275 9.3465 2.085 9.7425L1.575 9.8925C-0.525 10.512 -0.525 13.488 1.575 14.1075L2.085 14.2575C2.39939 14.3501 2.68908 14.5118 2.93282 14.7309C3.17656 14.95 3.36817 15.2209 3.4936 15.5237C3.61902 15.8264 3.67509 16.1535 3.65768 16.4807C3.64028 16.808 3.54984 17.1272 3.393 17.415L3.138 17.88C2.091 19.8045 4.1955 21.909 6.1185 20.8605L6.585 20.607C6.87277 20.4502 7.192 20.3597 7.51927 20.3423C7.84654 20.3249 8.17356 20.381 8.47634 20.5064C8.77913 20.6318 9.05 20.8234 9.26909 21.0672C9.48818 21.3109 9.64994 21.6006 9.7425 21.915L9.8925 22.425C10.512 24.525 13.488 24.525 14.1075 22.425L14.2575 21.915C14.3501 21.6006 14.5118 21.3109 14.7309 21.0672C14.95 20.8234 15.2209 20.6318 15.5237 20.5064C15.8264 20.381 16.1535 20.3249 16.4807 20.3423C16.808 20.3597 17.1272 20.4502 17.415 20.607L17.88 20.862C19.8045 21.909 21.909 19.8045 20.8605 17.8815L20.607 17.415C20.4502 17.1272 20.3597 16.808 20.3423 16.4807C20.3249 16.1535 20.381 15.8264 20.5064 15.5237C20.6318 15.2209 20.8234 14.95 21.0672 14.7309C21.3109 14.5118 21.6006 14.3501 21.915 14.2575L22.425 14.1075C24.525 13.488 24.525 10.512 22.425 9.8925L21.915 9.7425C21.6006 9.64994 21.3109 9.48818 21.0672 9.26909C20.8234 9.05 20.6318 8.77913 20.5064 8.47634C20.381 8.17356 20.3249 7.84654 20.3423 7.51927C20.3597 7.192 20.4502 6.87277 20.607 6.585L20.862 6.12C21.909 4.1955 19.8045 2.091 17.8815 3.1395L17.415 3.393C17.1272 3.54984 16.808 3.64028 16.4807 3.65768C16.1535 3.67509 15.8264 3.61902 15.5237 3.4936C15.2209 3.36817 14.95 3.17656 14.7309 2.93282C14.5118 2.68908 14.3501 2.39939 14.2575 2.085L14.1075 1.575ZM12 16.395C10.8344 16.395 9.71649 15.932 8.89227 15.1077C8.06804 14.2835 7.605 13.1656 7.605 12C7.605 10.8344 8.06804 9.71649 8.89227 8.89227C9.71649 8.06804 10.8344 7.605 12 7.605C13.1652 7.605 14.2827 8.06789 15.1067 8.89183C15.9306 9.71577 16.3935 10.8333 16.3935 11.9985C16.3935 13.1637 15.9306 14.2812 15.1067 15.1052C14.2827 15.9291 13.1652 16.392 12 16.392V16.395Z&#10;" styleClass="icon" />
+                       </graphic>
+                   </JFXButton>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <AnchorPane prefHeight="577.0" prefWidth="1192.0" styleClass="page-view">
+               <children>
+                  <VBox fx:id="pageView" layoutX="2.0" layoutY="2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <FlowPane orientation="VERTICAL" prefHeight="577.0" prefWidth="1192.0" prefWrapLength="1280.0" rowValignment="TOP" VBox.vgrow="ALWAYS">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="299.0" styleClass="info-pane">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="49.0" prefWidth="360.0" text="Voedselbak gewicht">
+                                       <styleClass>
+                                          <String fx:value="title" />
+                                          <String fx:value="info-header" />
+                                       </styleClass>
+                                    </Label>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="127.0" prefWidth="172.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <StackPane prefHeight="127.0" prefWidth="270.0" styleClass="icon-parent" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <SVGPath content="M34.4192 27.1742C33.1955 26.6089 29.1469 26.7971 27.8293 26.1386C26.5104 25.4795 24.5337 25.385 22.7452 25.2913C20.4734 25.1721 18.5084 26.4207 17.4728 26.5151C16.4372 26.6089 14.4606 27.1742 13.5187 28.3035C12.6713 28.8682 11.9184 29.9045 11.9184 29.9045H37.7143C37.7143 29.9045 35.6431 27.7389 34.4192 27.1742Z&#10;M44.9263 44.6345L41.7714 34.6219C41.2985 33.122 39.908 32.102 38.3351 32.102H11.6646C10.0923 32.102 8.7011 33.122 8.22891 34.6219L5.07399 44.6345C4.92095 45.1211 5.00891 45.6512 5.3104 46.0628C5.61196 46.4738 6.09134 46.7168 6.60134 46.7168H43.3991C43.9091 46.7168 44.3884 46.4738 44.6899 46.0628C44.9915 45.6512 45.0794 45.1211 44.9263 44.6345ZM33.4027 41.2764C33.4027 42.4832 32.4245 43.4609 31.2182 43.4609C30.012 43.4609 29.0337 42.4832 29.0337 41.2764C29.0337 41.2196 29.0383 41.1637 29.0421 41.1083C28.7803 40.838 28.4429 40.5944 28.0782 40.5944C27.2595 40.5944 26.4402 40.5944 26.4402 40.5944C26.4402 40.5944 22.3454 40.5944 21.5261 40.5944C21.1613 40.5944 20.8246 40.838 20.5622 41.1083C20.5661 41.1637 20.5706 41.2197 20.5706 41.2764C20.5706 42.4832 19.5931 43.4609 18.3861 43.4609C17.1799 43.4609 16.2023 42.4832 16.2023 41.2764C16.2023 40.4538 16.6575 39.7379 17.3297 39.3654C16.6575 38.9936 16.2023 38.2778 16.2023 37.4545C16.2023 36.2482 17.1799 35.2707 18.3861 35.2707C19.5174 35.2707 20.4475 36.1297 20.5595 37.2311C21.2531 38.0003 24.892 37.7274 26.4402 37.7274C27.9167 37.7274 28.2848 37.9488 29.0422 37.2929C29.1256 36.1623 30.0667 35.2707 31.2182 35.2707C32.4245 35.2707 33.4027 36.2482 33.4027 37.4545C33.4027 38.2778 32.9468 38.9936 32.2753 39.3654C32.9468 39.738 33.4027 40.4538 33.4027 41.2764Z" fill="#3da35d" strokeWidth="5.0" styleClass="icon" StackPane.alignment="CENTER" />
+                                             </children>
+                                          </StackPane>
+                                          <Label alignment="CENTER" prefHeight="127.0" prefWidth="264.0" styleClass="h1-text" text="3.2 KG" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="299.0" styleClass="info-pane">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="49.0" prefWidth="360.0" text="Keren geeten">
+                                       <font>
+                                          <Font name="Montserrat SemiBold" size="12.0" />
+                                       </font>
+                                       <styleClass>
+                                          <String fx:value="title" />
+                                          <String fx:value="info-header" />
+                                       </styleClass>
+                                    </Label>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="127.0" prefWidth="172.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <StackPane prefHeight="127.0" prefWidth="270.0" styleClass="icon-parent" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <SVGPath content="M38.5758 26.1875C37.8986 25.5102 37.0532 25.0567 36.1334 24.8665C35.9432 23.9467 35.4897 23.1014 34.8124 22.4242C32.9136 20.5252 29.8402 20.5254 27.9415 22.4242C26.2327 24.1329 26.0875 26.7489 27.3697 28.6091L17.6086 38.3703C15.7172 37.0715 13.1038 37.2618 11.4243 38.9415C9.52524 40.8405 9.52547 43.9137 11.4243 45.8125C12.1015 46.4897 12.9469 46.9433 13.8667 47.1335C14.0569 48.0532 14.5104 48.8986 15.1877 49.5758C17.0865 51.4748 20.1599 51.4746 22.0586 49.5758C23.7382 47.8962 23.9287 45.2828 22.6298 43.3915L32.3916 33.6297C34.283 34.9286 36.8964 34.738 38.576 33.0585C40.4748 31.1596 40.4746 28.0863 38.5758 26.1875Z" fill="#3da35d" strokeWidth="5.0" StackPane.alignment="CENTER">
+                                                   <styleClass>
+                                                      <String fx:value="icon" />
+                                                      <String fx:value="bone" />
+                                                   </styleClass>
+                                                </SVGPath>
+                                             </children>
+                                          </StackPane>
+                                          <Label alignment="CENTER" prefHeight="127.0" prefWidth="264.0" styleClass="h1-text" text="3 X" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="299.0" styleClass="info-pane">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="49.0" prefWidth="360.0" text="Next meal at">
+                                       <styleClass>
+                                          <String fx:value="title" />
+                                          <String fx:value="info-header" />
+                                       </styleClass>
+                                    </Label>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="127.0" prefWidth="172.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <StackPane prefHeight="127.0" prefWidth="270.0" styleClass="icon-parent" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <SVGPath content="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z&#10;" fill="#3da35d" strokeWidth="5.0" StackPane.alignment="CENTER">
+                                                   <styleClass>
+                                                      <String fx:value="icon" />
+                                                      <String fx:value="clock" />
+                                                   </styleClass>
+                                                </SVGPath>
+                                             </children>
+                                          </StackPane>
+                                          <Label alignment="CENTER" prefHeight="127.0" prefWidth="264.0" styleClass="h1-text" text="8:12" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="880.0" spacing="14.0" styleClass="info-pane">
+                                 <children>
+                                    <HBox alignment="CENTER" styleClass="info-header">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="418.0" styleClass="title" text="Hoeveel procent is al gegeten" />
+                                          <DatePicker editable="true" prefWidth="50.0" promptText="TODAY" styleClass="date" />
+                                       </children>
+                                    </HBox>
+                                    <VBox prefHeight="218.0" prefWidth="856.0" spacing="14.0">
+                                       <children>
+                                          <HBox alignment="CENTER" fillHeight="false" prefHeight="36.0" prefWidth="856.0" spacing="40.0" styleClass="progres" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="127.0" prefWidth="264.0" text="Tijdstip 1" HBox.hgrow="NEVER">
+                                                   <styleClass>
+                                                      <String fx:value="tijdstip" />
+                                                      <String fx:value="theme" />
+                                                   </styleClass>
+                                                </Label>
+                                                <ProgressBar prefHeight="36.0" prefWidth="820.0" progress="0.58" styleClass="progres-bar" />
+                                                <Label alignment="CENTER" prefHeight="32.0" prefWidth="0.0" text="100 %" HBox.hgrow="NEVER">
+                                                   <styleClass>
+                                                      <String fx:value="span-text" />
+                                                      <String fx:value="medium" />
+                                                   </styleClass>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" fillHeight="false" prefHeight="36.0" prefWidth="856.0" spacing="40.0" styleClass="progres">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="127.0" prefWidth="264.0" text="Tijdstip 1" HBox.hgrow="NEVER">
+                                                   <styleClass>
+                                                      <String fx:value="tijdstip" />
+                                                      <String fx:value="theme" />
+                                                   </styleClass>
+                                                </Label>
+                                                <ProgressBar prefHeight="36.0" prefWidth="820.0" progress="0.58" styleClass="progres-bar" />
+                                                <Label alignment="CENTER" prefHeight="32.0" prefWidth="0.0" text="100 %" HBox.hgrow="NEVER">
+                                                   <styleClass>
+                                                      <String fx:value="span-text" />
+                                                      <String fx:value="medium" />
+                                                   </styleClass>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="224.0" prefHeight="414.0" prefWidth="880.0" styleClass="chart-parent">
+                                 <children>
+                                    <HBox alignment="CENTER" styleClass="chart-header">
+                                       <children>
+                                          <Group>
+                                             <HBox.margin>
+                                                <Insets right="12.0" />
+                                             </HBox.margin>
+                                             <children>
+                                                <SVGPath content="M142.11,222.098l-56.258,56.257c12.345,5.919,22.365,15.939,28.284,28.285l56.258-56.257 C158.049,244.463,148.03,234.444,142.11,222.098z&#10;M272.903,244.618l-22.519-22.519c-5.919,12.346-15.939,22.365-28.284,28.284l22.519,22.52 C250.538,260.557,260.557,250.538,272.903,244.618z&#10;M380.863,188.36l-56.257,56.257c12.346,5.919,22.365,15.939,28.285,28.284l56.257-56.257 C396.802,210.726,386.783,200.706,380.863,188.36z&#10;M0,332.491c0,33.084,26.916,60,60,60v-120C26.916,272.491,0,299.407,0,332.491z&#10;M375,162.509c0,9.251,2.108,18.019,5.863,25.852c5.919,12.346,15.939,22.365,28.285,28.285 c7.833,3.756,16.601,5.864,25.852,5.864v-120C401.916,102.509,375,129.425,375,162.509z&#10;M136.247,196.247c0,9.251,2.108,18.019,5.863,25.852c5.919,12.346,15.938,22.365,28.284,28.284 c7.833,3.756,16.601,5.864,25.853,5.864v-120C163.163,136.247,136.247,163.163,136.247,196.247z&#10;M272.903,244.618c-12.346,5.92-22.365,15.939-28.284,28.285c-3.756,7.833-5.863,16.6-5.863,25.852 c0,33.084,26.916,60,60,60v-120C289.503,238.754,280.736,240.862,272.903,244.618z&#10;M85.853,278.355c-7.833-3.756-16.601-5.864-25.853-5.864v120c33.084,0,60-26.916,60-60 c0-9.251-2.108-18.018-5.863-25.851C108.218,294.294,98.198,284.275,85.853,278.355z&#10;M435,102.509v120c33.084,0,60-26.916,60-60S468.084,102.509,435,102.509z&#10;M250.383,222.099c3.756-7.833,5.864-16.601,5.864-25.852c0-33.084-26.916-60-60-60v120 c9.251,0,18.019-2.108,25.852-5.864C234.445,244.464,244.464,234.445,250.383,222.099z&#10;M324.606,244.618c-7.833-3.756-16.6-5.863-25.852-5.863v120c33.084,0,60-26.916,60-60 c0-9.251-2.108-18.019-5.864-25.852C346.972,260.556,336.952,250.537,324.606,244.618z" styleClass="icon" />
+                                             </children>
+                                          </Group>
+                                          <Label alignment="CENTER" prefHeight="49.0" styleClass="title" text="Weight progress" />
+                                       </children>
+                                    </HBox>
+                                    <VBox styleClass="chart-container">
+                                       <children>
+                                          <BarChart id="bar-chart" fx:id="barChart" legendSide="TOP" legendVisible="false" styleClass="bar-chart" verticalGridLinesVisible="false" verticalZeroLineVisible="false">
+                                            <xAxis>
+                                              <CategoryAxis prefHeight="21.0" prefWidth="736.0" side="BOTTOM" style="-fx-border-width: 3;" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis minorTickVisible="false" side="LEFT" style="-fx-border-width: 3;" tickLabelGap="4.0" tickLength="12.0" tickUnit="0.0" upperBound="99.0" />
+                                            </yAxis>
+                                          </BarChart>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <styleClass>
+                              <String fx:value="flexbox" />
+                              <String fx:value="elements" />
+                           </styleClass>
+                        </FlowPane>
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+         </center>
+        </BorderPane>
+
+    </AnchorPane>
+
+    <stylesheets>
+        <URL value="@../css/desktop/default.css" />
+        <URL value="@../css/desktop/view.css" />
+    </stylesheets>
+</AnchorPane>

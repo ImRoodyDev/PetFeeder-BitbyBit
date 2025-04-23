@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="app-parent" fx:id="appView" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0"
+            styleClass="root" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.bitbybit.controllers.AppController">
+	<children>
+		<AnchorPane style="-fx-background-radius: 25;" styleClass="app-home" AnchorPane.bottomAnchor="0.0"
+		            AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<children>
+				<StackPane fx:id="backgroundContainer" alignment="BOTTOM_RIGHT" styleClass="background"
+				           AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+				           AnchorPane.topAnchor="0.0">
+					<children>
+						<Pane prefHeight="200.0" prefWidth="200.0">
+							<children>
+								<ImageView fitHeight="897.0" fitWidth="695.0" layoutX="548.0" layoutY="-238.0"
+								           pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../../images/path4.png"/>
+									</image>
+								</ImageView>
+								<ImageView fitHeight="55.0" fitWidth="53.0" layoutX="269.0" layoutY="349.0"
+								           pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../../images/path5.png"/>
+									</image>
+								</ImageView>
+								<ImageView fitHeight="170.0" fitWidth="62.0" layoutX="523.0" layoutY="284.0"
+								           pickOnBounds="true" preserveRatio="true" rotate="63.4">
+									<image>
+										<Image url="@../../images/path5.png"/>
+									</image>
+								</ImageView>
+								<ImageView fitHeight="170.0" fitWidth="62.0" layoutX="490.0" layoutY="490.0"
+								           pickOnBounds="true" preserveRatio="true" rotate="-45.0">
+									<image>
+										<Image url="@../../images/path5.png"/>
+									</image>
+								</ImageView>
+								<ImageView fitHeight="170.0" fitWidth="62.0" layoutX="459.0" layoutY="120.0"
+								           pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../../images/path5.png"/>
+									</image>
+								</ImageView>
+							</children>
+						</Pane>
+						<ImageView fx:id="catImage" fitHeight="720.0" preserveRatio="true" styleClass="bg-image">
+							<image>
+								<Image url="@../../images/8623056.png"/>
+							</image>
+						</ImageView>
+					</children>
+				</StackPane>
+				<BorderPane pickOnBounds="false" styleClass="container" AnchorPane.bottomAnchor="0.0"
+				            AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+					<top>
+						<HBox prefHeight="33.0" prefWidth="1316.0" styleClass="header" BorderPane.alignment="CENTER">
+							<children>
+								<ImageView fitHeight="28.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true"
+								           styleClass="logo">
+									<image>
+										<Image url="@../../images/logo.png"/>
+									</image>
+								</ImageView>
+								<ImageView fitHeight="24.0" fitWidth="260.0" layoutX="10.0" layoutY="10.0"
+								           pickOnBounds="true" preserveRatio="true" styleClass="logo">
+									<image>
+										<Image url="@../../images/bitbybit.png"/>
+									</image>
+								</ImageView>
+							</children>
+							<BorderPane.margin>
+								<Insets/>
+							</BorderPane.margin>
+						</HBox>
+					</top>
+					<center>
+						<VBox prefHeight="580.0" prefWidth="343.0" styleClass="elements" BorderPane.alignment="CENTER">
+							<children>
+								<Text strokeMiterLimit="11.0" strokeType="OUTSIDE" strokeWidth="0.0"
+								      styleClass="h1-text" text="Feeling Better"/>
+
+								<Text layoutX="10.0" layoutY="58.0" strokeMiterLimit="11.0" strokeType="OUTSIDE"
+								      strokeWidth="0.0" text="With Your Little">
+									<styleClass>
+										<String fx:value="h1-text"/>
+										<String fx:value="medium"/>
+									</styleClass>
+								</Text>
+
+								<Text fill="#00aced" strokeMiterLimit="11.0" strokeType="OUTSIDE" strokeWidth="0.0"
+								      text="Pets ... ">
+									<styleClass>
+										<String fx:value="h1-text"/>
+										<String fx:value="medium"/>
+										<String fx:value="theme"/>
+									</styleClass>
+								</Text>
+								<HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="540.0" spacing="40.0">
+									<children>
+										<JFXButton buttonType="RAISED" onAction="#switchToRegister" text="Get started">
+											<styleClass>
+												<String fx:value="bt"/>
+												<String fx:value="get-started"/>
+											</styleClass>
+										</JFXButton>
+										<JFXButton buttonType="RAISED" layoutX="380.0" layoutY="35.0"
+										           onAction="#switchToLogin" text="Login">
+											<styleClass>
+												<String fx:value="bt"/>
+												<String fx:value="login"/>
+											</styleClass>
+										</JFXButton>
+									</children>
+								</HBox>
+
+							</children>
+						</VBox>
+					</center>
+				</BorderPane>
+			</children>
+		</AnchorPane>
+	</children>
+	<stylesheets>
+		<URL value="@../../css/desktop/default.css"/>
+		<URL value="@../../css/desktop/view.css"/>
+	</stylesheets>
+</AnchorPane>

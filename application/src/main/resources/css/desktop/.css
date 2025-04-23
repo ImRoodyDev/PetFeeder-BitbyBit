@@ -1,0 +1,24 @@
+.app-dashboard .container .month {
+	-fx-font-size: 14;
+	-fx-font-weight: 700;
+	-fx-alignment: center;
+
+	-fx-pref-width: 112;
+	-fx-background-color: white;
+	-fx-background-radius: 18;
+	-fx-border-radius: 18;
+	-fx-border-color: #4d4d4d;
+	-jfx-focus-color: transparent; /* Remove focus underline color */
+	-jfx-unfocus-color: transparent; /* Remove unfocused underline color */
+}
+.app-dashboard .container .month .text-field {
+	-fx-alignment: center;
+}
+.app-dashboard .container .month > .prompt-container {
+	-fx-alignment: center;
+}
+.combo-box-popup .list-view {
+	-fx-background-radius: 12px; /* Apply rounded corners to the popup */
+	-fx-border-radius: 12px; /* Match the border radius */
+	-fx-translate-y: 2;
+}

@@ -1,0 +1,25 @@
+* {
+	-fx-margin: 0;
+	-fx-padding: 0;
+	-fx-font-family: 'Montserrat';
+}
+
+.root {
+	-fx-border-width: 1;
+	-fx-border-radius: 18;
+	-fx-background-radius: 18;
+
+	-fx-background-color: white;
+	-fx-border-color: #a3a3a3; /*#f9f9f9*/
+	/* dropshadow(<blurType>, <color>, <radius>, <spread>, <offsetX>5, <offsetY>)5	*/
+}
+
+/* Center the text inside the combo box */
+.combo-box .list-cell {
+	-fx-alignment: center; /* Centers text in each cell of the dropdown */
+}
+
+/* Center the selected value in the combo box */
+.combo-box .label {
+	-fx-alignment: center; /* Centers the selected item text in the combo box display */
+}
