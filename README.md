@@ -1,12 +1,25 @@
-# 🐾 Automated Pet Feeder System | School Challenge Project
+<div align="center" display="flex">
+<img src="https://github.com/user-attachments/assets/060f4e70-e193-4761-868e-1f7ed3320e39" alt="BitByBit Logo" height="100"/>
+<img src="https://github.com/user-attachments/assets/b1d3daa4-a7be-414a-a40f-b30e5a3fed04" alt="BitByBit" width="400"/>
+</div 
+
+#
+#
+<h1>🐾 Automated Pet Feeder System </h1>
+
+ <div align="left" display="flex">
+  <img src="https://github.com/user-attachments/assets/57e208d8-08a5-479e-8b75-1153c2b14759" alt="Image" height="50"/>
+  <img src="https://github.com/user-attachments/assets/1891173a-1321-43ce-8e00-affdf127cdb3" alt="Image" width="200"/>
+  <h3>THAUS The Challenge Project</h3>
+ </div>
 
 [![Status](https://img.shields.io/badge/status-completed-success)](https://github.com/imroodydev)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Challenge Project](https://img.shields.io/badge/Challenge-Project-orange)](https://github.com/imroodydev)
 
-<p align="center">
-  <img src="https://via.placeholder.com/800x400?text=Pet+Feeder+Project" alt="Pet Feeder Project" width="600">
-</p>
+<div align="center">
+<video width="500" height="300" controls src="https://github.com/user-attachments/assets/66c23009-1b21-452f-a359-fb7b18be57a2"> </video>
+</div>
 
 ## 🌟 Project Overview
 
