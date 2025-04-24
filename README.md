@@ -27,6 +27,11 @@ This automated pet feeder system ensures your furry friends are fed on time, eve
 
 The system precisely measures food weight using a load cell, dispenses food with a servo motor, and connects to a centralized server to store feeding data and allow remote management.
 
+## 🌟 UI
+<div align="center">
+<video width="500" height="300" controls src="https://github.com/user-attachments/assets/1fe5624f-0497-4393-b466-a68f11624ff1"> </video>
+</div>
+
 ## 📁 Repository Structure
 
 ## 🔍 Components
